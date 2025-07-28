@@ -32,6 +32,7 @@ function main() {
           pdf.getPage(i).then(function(page){
             console.log(page);
             page.getTextContent().then(function(text){
+              console.log("db",text.items);
               //Remove common items from array
               var cleanedArray = text.items.splice(48);
               console.log("cleanedArray", cleanedArray);
