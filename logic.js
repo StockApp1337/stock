@@ -1,7 +1,7 @@
 window.addEventListener("load", main);
 
 function main() {
-  console.log("doneFive");
+  console.log("doneSix");
   var picker = document.getElementById("picker");
   console.log(picker);
   picker.addEventListener("change", (e)=> {
