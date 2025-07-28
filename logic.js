@@ -14,6 +14,7 @@ function main() {
     //Store Base64
     reader.onload =() => {
       base64data = reader.result;
+      base64data = base64data.splice(28);
       console.log(base64data);
     }
   }
