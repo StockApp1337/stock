@@ -27,6 +27,9 @@ function main() {
       loadingTask.promise.then(function(pdf) {
         console.log("PDF Loaded");
         console.log(pdf);
+        pdf.getPage(1).then(function(page){
+          console.log(page);
+        })
       })
     }
   }
