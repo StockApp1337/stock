@@ -20,7 +20,7 @@ function main() {
       //Start PDFJS
       var pdfData = atob(base64data);
 
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "//mozilla.github.io/pdf.js/build/pdf.worker.mjs"
+      //pdfjsLib.GlobalWorkerOptions.workerSrc = "//mozilla.github.io/pdf.js/build/pdf.worker.mjs"
       console.log(pdfjsLib.GlobalWorkerOptions.workerSrc, "worker");
       var loadingTask = pdfjsLib.getDocument({data: pdfData});
       console.log(loadingTask, "loadingTask");
