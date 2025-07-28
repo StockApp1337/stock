@@ -5,7 +5,7 @@ function main() {
   var picker = document.getElementById("picker");
   console.log(picker);
   picker.addEventListener("change", (e)=> {
-    console.log(e);
+    console.log(e.target.files);
     console.log("inside function");
     console.log(window.location.origin);
   }
