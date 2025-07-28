@@ -13,9 +13,8 @@ function main() {
     let base64data;
     //Store Base64
     reader.onload =() => {
-      base64data = reader.result;
-    //  base64data = base64data.splice(28);
-      console.log(typeof base64data);
+      base64data = reader.result.slice(28);
+      console.log(base64data);
     }
   }
   )
