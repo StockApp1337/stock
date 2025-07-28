@@ -7,7 +7,7 @@ function main() {
   picker.addEventListener("change", (e)=> {
     console.log(e);
     console.log("inside function");
-    const file = picker.files[0];
+    const file = e.files[0];
     console.log(file);
     //Load file into pdfjs
     var loadingTask = pdfjsLib.getDocument(file);
