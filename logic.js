@@ -13,6 +13,7 @@ function main() {
     let base64text;
     //Store Base64
     reader.onload =() => {
+      base64text = reader.result.shift(10);
       console.log(reader.result);
     }
   }
