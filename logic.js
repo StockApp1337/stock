@@ -30,12 +30,11 @@ function main() {
         for(var i = 0; i <= pdf.numPages; i++){
           pdf.getPage(i).then(function(page){
             console.log(page);
-        }
-
         })
+
+        }
       })
     }
-  }
-  )
+  })
 
   }
