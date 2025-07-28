@@ -21,7 +21,9 @@ function main() {
       var pdfData = atob(base64data);
 
       pdfjsLib.GlobalWorkerOptions.workerSrc = "//mozilla.github.io/pdf.js/build/pdf.worker.mjs"
+      console.log(pdfjsLib.GlobalWorkerOptions.workerSrc, "worker");
       var loadingTask = pdfjsLib.getDocument({data : pdfData});
+      console.log(loadingTask, "loadingTask");
       loadingTask.promise.then(function(pdf) {
         console.log("PDF Loaded");
         console.log(pdf);
