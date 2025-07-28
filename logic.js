@@ -10,11 +10,11 @@ function main() {
     let reader = new FileReader();
     //Encode PDF data into Base64
     reader.readAsDataURL(e.target.files[0]);
-    let base64text;
+    let base64data;
     //Store Base64
     reader.onload =() => {
-      base64text = reader.result.shift(10);
-      console.log(base64text);
+      base64data = reader.result.shift(10);
+      console.log(base64data);
     }
   }
   )
