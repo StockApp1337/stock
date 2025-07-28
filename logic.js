@@ -15,6 +15,15 @@ function main() {
     reader.onload =() => {
       base64data = reader.result.slice(28);
       console.log(base64data);
+      //Start PDFJS
+      var pdfData = atob(base64data);
+      var { pdfjsLib } = globalThis;
+      pdfjsLib.GlobalWorkerOptions.workersrc = "//mozilla.github.io/pdf.js/build/pdf.worker.mjs"
+      var loadingTask = pdfjsLib.getDocument({data : pdfData});
+      loadingTask.promise.then(function(pdf) {
+        console.log("PDF Loaded");
+        console.log(pdf);
+      })
     }
   }
   )
