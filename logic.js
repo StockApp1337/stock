@@ -2,6 +2,7 @@ window.addEventListener("load", main);
 
 function main() {
   var { pdfjsLib } = globalThis;
+  console.log(pdfjsLib, "pdfjsLib");
   console.log("doneSix");
   var picker = document.getElementById("picker");
   console.log(picker);
