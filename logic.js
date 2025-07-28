@@ -27,9 +27,11 @@ function main() {
       loadingTask.promise.then(function(pdf) {
         console.log("PDF Loaded");
         console.log(pdf);
-        console.log("pages", pdf.numPages);
-        pdf.getPage(1).then(function(page){
-          console.log(page);
+        for(var i = 0; i <= pdf.numPages; i++){
+          pdf.getPage(i).then(function(page){
+            console.log(page);
+        }
+
         })
       })
     }
