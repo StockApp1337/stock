@@ -13,7 +13,7 @@ function main() {
     let base64data;
     //Store Base64
     reader.onload =() => {
-      base64data = reader.result.shift(10);
+      base64data = reader.result;
       console.log(base64data);
     }
   }
