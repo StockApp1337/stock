@@ -1,6 +1,7 @@
 window.addEventListener("load", main);
 
 function main() {
+  var { pdfjsLib } = globalThis;
   console.log("doneSix");
   var picker = document.getElementById("picker");
   console.log(picker);
@@ -17,7 +18,7 @@ function main() {
       console.log(base64data);
       //Start PDFJS
       var pdfData = atob(base64data);
-      var { pdfjsLib } = globalThis;
+
       //pdfjsLib.GlobalWorkerOptions.workerSrc = "//mozilla.github.io/pdf.js/build/pdf.worker.mjs"
       var loadingTask = pdfjsLib.getDocument({data : pdfData});
       loadingTask.promise.then(function(pdf) {
