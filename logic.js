@@ -5,12 +5,15 @@ function main() {
   var picker = document.getElementById("picker");
   console.log(picker);
   picker.addEventListener("change", (e)=> {
-    console.log(e.target.files[0]);
     console.log("inside function");
+    //Define reader object
     let reader = new FileReader();
+    //Encode PDF data into Base64
     reader.readAsDataURL(e.target.files[0]);
+    let base64text;
+    //Store Base64
     reader.onload =() => {
-      console.log(reader.result[0]);
+      console.log(reader.result);
     }
   }
   )
