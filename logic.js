@@ -1,6 +1,7 @@
 window.addEventListener("load", main);
 
 function main() {
+  var database = {};
   var { pdfjsLib } = globalThis;
   console.log(pdfjsLib, "pdfjsLib");
   console.log("doneSix");
@@ -31,7 +32,9 @@ function main() {
           pdf.getPage(i).then(function(page){
             console.log(page);
             page.getTextContent().then(function(text){
-              console.log("text.items", text.items);
+              //Remove common items from array
+              var cleanedArray = text.items.splice(48);
+              console.log("cleanedArray", cleanedArray);
             })
         })
 
