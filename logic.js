@@ -38,6 +38,7 @@ function main() {
               for(let q = 0; q < text.items.length; q+=3){
               if(text.items[i].str == "Purchase Name" || "Unit" || "Theoretical" || "Close Qty" || "Closing Quantity" || "TOTAL") {
                 continue;
+                q++;
               }
               console.log("cleanedArray", cleanedArray);
               let tempEntry = {"Unit" : text.items[q+1].str,
@@ -46,7 +47,7 @@ function main() {
                                "Total" : 0};
               database[text.items[q].str = tempEntry];
               }
-
+              console.log("database", database);
             })
         })
 
