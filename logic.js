@@ -36,8 +36,9 @@ function main() {
               //Remove common items from array
               var cleanedArray = text.items.splice(48);
               for(let q = 0; q < text.items.length(); q++){
-              if(text.items[i] == "Purchase Name" || "Unit" || "Theoretical" || "Close Qty" || "Closing Quantity" || "TOTAL")
+              if(text.items[i] == "Purchase Name" || "Unit" || "Theoretical" || "Close Qty" || "Closing Quantity" || "TOTAL") {
                 continue;
+              }
               console.log("cleanedArray", cleanedArray);
               let tempEntry = {"Unit" : ,
                                "Theoretical Close Quantity" : ,
