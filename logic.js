@@ -35,17 +35,18 @@ function main() {
               console.log("db",text.items);
               //Remove common items from array
               var cleanedArray = text.items.splice(48);
-              for(let q = 0; q < text.items.length; q+=3){
-              if(text.items[i].str == "Purchase Name" || "Unit" || "Theoretical" || "Close Qty" || "Closing Quantity" || "TOTAL") {
+              for(let q = 0; q < cleanedArray.length; q+=3){
+              if(cleanedArray[q].str == "Purchase Name" || "Unit" || "Theoretical" || "Close Qty" || "Closing Quantity" || "TOTAL") {
                 continue;
+                console.log(cleanedArray[q].str);
                 q++;
               }
               console.log("cleanedArray", cleanedArray);
-              let tempEntry = {"Unit" : text.items[q+1].str,
-                               "Theoretical Close Quantity" : text.items[q+2].str,
-                               "Closing Quantity" : text.items[q+3].str,
+              let tempEntry = {"Unit" : cleanedArray[q+1].str,
+                               "Theoretical Close Quantity" : cleanedArray[q+2].str,
+                               "Closing Quantity" : cleanedArray[q+3].str,
                                "Total" : 0};
-              database[text.items[q].str] = tempEntry;
+              database[cleanedArray[q].str] = tempEntry;
               }
               console.log("database", database);
             })
