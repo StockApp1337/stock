@@ -35,17 +35,17 @@ function main() {
               console.log("db",text.items);
               //Remove common items from array
               var cleanedArray = text.items.splice(48);
-              for(let q = 0; q < text.items.length(); q+=3){
-              if(text.items[i] == "Purchase Name" || "Unit" || "Theoretical" || "Close Qty" || "Closing Quantity" || "TOTAL") {
+              for(let q = 0; q < text.items.length; q+=3){
+              if(text.items[i].str == "Purchase Name" || "Unit" || "Theoretical" || "Close Qty" || "Closing Quantity" || "TOTAL") {
                 continue;
               }
               console.log("cleanedArray", cleanedArray);
-              let tempEntry = {"Unit" : text.items[q+1],
-                               "Theoretical Close Quantity" : text.items[q+2],
-                               "Closing Quantity" : text.items[q+3],
+              let tempEntry = {"Unit" : text.items[q+1].str,
+                               "Theoretical Close Quantity" : text.items[q+2].str,
+                               "Closing Quantity" : text.items[q+3].str,
                                "Total" : 0};
               }
-              database[text.items[q] = tempEntry];
+              database[text.items[q].str = tempEntry];
             })
         })
 
