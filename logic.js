@@ -45,7 +45,7 @@ function main() {
                                "Theoretical Close Quantity" : text.items[q+2].str,
                                "Closing Quantity" : text.items[q+3].str,
                                "Total" : 0};
-              database[text.items[q].str = tempEntry];
+              database[text.items[q].str] = tempEntry;
               }
               console.log("database", database);
             })
