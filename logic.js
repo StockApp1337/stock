@@ -74,7 +74,7 @@ function main() {
       //console.log(databaseArray, "databaseArray");
 
 
-    })
+    }).then(console.log("DONE!!!!!!"))
   }
 
 
