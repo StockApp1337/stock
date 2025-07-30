@@ -5,7 +5,7 @@ function main() {
   var databaseArray = [];
   var { pdfjsLib } = globalThis;
   console.log(pdfjsLib, "pdfjsLib");
-  console.log("doneSeven");
+  console.log("doneEight");
   var picker = document.getElementById("picker");
   console.log(picker);
   picker.addEventListener("change", (e)=> {
@@ -61,8 +61,9 @@ function main() {
       database[cleanedArray[q].str] = tempEntry;
       //console.log("database", database);
     } */
+    console.log("just outside for DATABSEARRAY");
     for (let s = 0; s < databaseArray.length; s++){
-      console.log(databaseArray, "databaseArrayFinal");
+      console.log(databaseArray[s], "databaseArrayFinal");
     }
     })
   }
