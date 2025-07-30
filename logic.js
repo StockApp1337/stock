@@ -55,7 +55,7 @@ function main() {
                                "Total" : 0};
               database[cleanedArray[q].str] = tempEntry;
               //console.log("database", database);
-            })
+            }
         })
 
         }
