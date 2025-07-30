@@ -47,7 +47,7 @@ function main() {
 
         })
 
-      }).then(clean);
+      }).then(clean(databaseArray));
       }
       //console.log(databaseArray, "databaseArray");
       function clean(){
