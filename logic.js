@@ -36,7 +36,7 @@ function main() {
               //Remove common items from array
               var cleanedArray = text.items.splice(48);
               for(let q = 0; q < cleanedArray.length; q+=3){
-              if(cleanedArray[q].str == "Purchase Name" || "Unit" || "Theoretical" || "Close Qty" || "Closing Quantity" || "TOTAL") {
+              if(cleanedArray[q].str == "Purchase Name" || cleanedArray[q].str == "Unit" || cleanedArray[q].str == "Theoretical" || cleanedArray[q].str == "Close Qty" || cleanedArray[q].str == "Closing Quantity" || cleanedArray[q].str == "TOTAL") {
                 continue;
                 console.log(cleanedArray[q].str);
                 q++;
