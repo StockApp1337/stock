@@ -1,8 +1,8 @@
 window.addEventListener("load", main);
-
+var databaseArray = [];
 function main() {
   var database = {};
-  var databaseArray = [];
+
   var { pdfjsLib } = globalThis;
   console.log(pdfjsLib, "pdfjsLib");
   console.log("doneEight");
