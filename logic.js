@@ -37,13 +37,13 @@ function main() {
               //Remove common items from array
               var cleanedArray = text.items.splice(48);
               databaseArray.push(cleanedArray);
-              console.log(databaseArray, "databaseArray inside for");
+              //console.log(databaseArray, "databaseArray inside for");
               /*
 
               console.log("cleanedArray", cleanedArray);
 
             } */
-              console.log(databaseArray, "databaseArrayOutsideLoop");
+              //console.log(databaseArray, "databaseArrayOutsideLoop");
 
         })
 
