@@ -2,7 +2,7 @@ window.addEventListener("load", main);
 var databaseArray = [];
 function main() {
   var database = {};
-
+  var cleanedArray;
   var { pdfjsLib } = globalThis;
   console.log(pdfjsLib, "pdfjsLib");
   console.log("doneEight");
@@ -35,7 +35,7 @@ function main() {
             page.getTextContent().then(function(text){
               //console.log("db",text.items);
               //Remove common items from array
-              var cleanedArray = text.items.splice(48);
+              cleanedArray = text.items.splice(48);
 
               /*for(let x = 0; x < databaseArray.length; x++){
               for(let q = 0; q < databaseArray[x].length; q+=3){
