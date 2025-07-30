@@ -50,8 +50,9 @@ function main() {
       })
       }
       console.log(databaseArray, "databaseArray");
-    /*  for(let q = 0; q < databaseArray.length; q+=3){
-      if(cleanedArray[q].str == "Purchase Name" || cleanedArray[q].str == "Unit" || cleanedArray[q].str == "Theoretical" || cleanedArray[q].str == "Close Qty" || cleanedArray[q].str == "Closing Quantity" || cleanedArray[q].str == "TOTAL" || cleanedArray[q].str == " " || cleanedArray[q].str == "11 Bottled Cider" || cleanedArray[q].str == "12 Bottled Lager" || cleanedArray[q].str == "12A NA Bottled Lager" || cleanedArray[q].str == "13 Bottled Spirit" || cleanedArray[q].str == "14 Shots" || cleanedArray[q].str == "15 Fortified" || cleanedArray[q].str == "17 Spirits" || cleanedArray[q].str == "17A NA Spirits" || cleanedArray[q].str == "19 Cocktail Glasses" || cleanedArray[q].str == "24 Wines" || cleanedArray[q].str == "25 Sparkling" || cleanedArray[q].str == "26 Mins - Energy" || cleanedArray[q].str == "27 Mins - Mixers" || cleanedArray[q].str == "28 Mins - Packaged" || cleanedArray[q].str == "29 Mins - Non Pack" || cleanedArray[q].str == "33 Bar Garnish" || cleanedArray[q].str == "Dry Recipe Line") {
+      for(let x = 0; x < databaseArray.length; x++){
+      for(let q = 0; q < databaseArray[x].length; q+=3){
+      if(databaseArray[q].str == "Purchase Name" || databaseArray[q].str == "Unit" || databaseArray[q].str == "Theoretical" || databaseArray[q].str == "Close Qty" || databaseArray[q].str == "Closing Quantity" || databaseArray[q].str == "TOTAL" || databaseArray[q].str == " " || databaseArray[q].str == "11 Bottled Cider" || databaseArray[q].str == "12 Bottled Lager" || databaseArray[q].str == "12A NA Bottled Lager" || databaseArray[q].str == "13 Bottled Spirit" || databaseArray[q].str == "14 Shots" || databaseArray[q].str == "15 Fortified" || databaseArray[q].str == "17 Spirits" || databaseArray[q].str == "17A NA Spirits" || databaseArray[q].str == "19 Cocktail Glasses" || databaseArray[q].str == "24 Wines" || databaseArray[q].str == "25 Sparkling" || databaseArray[q].str == "26 Mins - Energy" || databaseArray[q].str == "27 Mins - Mixers" || databaseArray[q].str == "28 Mins - Packaged" || databaseArray[q].str == "29 Mins - Non Pack" || databaseArray[q].str == "33 Bar Garnish" || databaseArray[q].str == "Dry Recipe Line" || databaseArray[q].str == "Notes:") {
         q++;
         continue;
       }
@@ -59,10 +60,11 @@ function main() {
                        "Theoretical Close Quantity" : databaseArray[q+2].str,
                        "Closing Quantity" : databaseArray[q+3].str,
                        "Total" : 0};
-      database[cleanedArray[q].str] = tempEntry;
+      database[databaseArray[q].str] = tempEntry;
       //console.log("database", database);
-    } */
-
+    }
+  }
+  console.log(database, "DATABASE");
     })
   }
 
