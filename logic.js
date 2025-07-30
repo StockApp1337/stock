@@ -50,7 +50,7 @@ function main() {
       }).then(clean(databaseArray));
       }
       //console.log(databaseArray, "databaseArray");
-      function clean(){
+      function clean(databaseArray){
       for(let x = 0; x < databaseArray.length; x++){
       for(let q = 0; q < databaseArray[x].length; q+=3){
       if(databaseArray[x][q].str == "Purchase Name" || databaseArray[x][q].str == "Unit" || databaseArray[x][q].str == "Theoretical" || databaseArray[x][q].str == "Close Qty" || databaseArray[x][q].str == "Closing Quantity" || databaseArray[x][q].str == "TOTAL" || databaseArray[x][q].str == " " || databaseArray[x][q].str == "11 Bottled Cider" || databaseArray[x][q].str == "12 Bottled Lager" || databaseArray[x][q].str == "12A NA Bottled Lager" || databaseArray[x][q].str == "13 Bottled Spirit" || databaseArray[x][q].str == "14 Shots" || databaseArray[x][q].str == "15 Fortified" || databaseArray[x][q].str == "17 Spirits" || databaseArray[x][q].str == "17A NA Spirits" || databaseArray[x][q].str == "19 Cocktail Glasses" || databaseArray[x][q].str == "24 Wines" || databaseArray[x][q].str == "25 Sparkling" || databaseArray[x][q].str == "26 Mins - Energy" || databaseArray[x][q].str == "27 Mins - Mixers" || databaseArray[x][q].str == "28 Mins - Packaged" || databaseArray[x][q].str == "29 Mins - Non Pack" || databaseArray[x][q].str == "33 Bar Garnish" || databaseArray[x][q].str == "Dry Recipe Line" || databaseArray[x][q].str == "Notes:") {
