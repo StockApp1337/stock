@@ -5,7 +5,7 @@ function main() {
   var databaseArray = [];
   var { pdfjsLib } = globalThis;
   console.log(pdfjsLib, "pdfjsLib");
-  console.log("doneSix");
+  console.log("doneSeven");
   var picker = document.getElementById("picker");
   console.log(picker);
   picker.addEventListener("change", (e)=> {
