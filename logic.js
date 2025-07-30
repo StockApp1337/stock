@@ -61,11 +61,12 @@ function main() {
       database[cleanedArray[q].str] = tempEntry;
       //console.log("database", database);
     } */
+    for (let s = 0; s < databaseArray.length; s++){
+      console.log(databaseArray, "databaseArrayFinal");
+    }
     })
   }
-  for (let s = 0; s < databaseArray.length; s++){
-    console.log(databaseArray, "databaseArrayFinal");
-  }
+
 
 })
 }
