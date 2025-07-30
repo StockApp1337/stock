@@ -2,6 +2,7 @@ window.addEventListener("load", main);
 
 function main() {
   var database = {};
+  var databaseArray = [];
   var { pdfjsLib } = globalThis;
   console.log(pdfjsLib, "pdfjsLib");
   console.log("doneSix");
